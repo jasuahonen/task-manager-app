@@ -1,0 +1,60 @@
+.tasks, .tags, .addTasks, .addTags {
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* background colors */
+.tasks { background-color: blueviolet; }
+.tags { background-color: green; }
+.addTasks { background-color: blue; }
+.addTags { background-color: darkgoldenrod; }
+
+/* button decoration */
+.delete-task-button, .delete-tag-button, .add-a-task, .add-a-tag {
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 12px;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* buttons for deleting */
+.delete-task-button, .delete-tag-button {
+    background-color: red;
+}
+
+/* buttons for adding */
+.add-a-task, .add-a-tag {
+    background-color: green;
+}
+
+.add-task-container {
+    display: grid;
+    gap: 10px;
+}
+
+/* small screen */
+@media (max-width: 600px) {
+    .add-task-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* medium screen */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .add-task-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* large screen */
+@media (min-width: 1025px) {
+    .add-task-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,104 @@
+/* styles for components */
+.task {
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.task.running {
+    background-color: darkgreen;
+    border-color: #00796b;
+    animation: pulse 1.5s infinite;
+}
+
+/* pulses for ongoing tasks */
+@keyframes pulse {
+    0% { background-color: rgba(0, 100, 0, 0.916); }
+    50% { background-color: rgba(0, 100, 0, 0.666); }
+    100% { background-color: rgba(0, 100, 0, 0.388); }
+}
+
+/* button styles */
+button.start-timer, button.stop-timer {
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* button styles */
+button.start-timer {
+    background-color: green;
+    color: white;
+}
+
+button.start-timer:hover {
+    background-color: darkgreen;
+}
+
+button.stop-timer {
+    background-color: red;
+    color: white;
+}
+
+button.stop-timer:hover {
+    background-color: darkred;
+}
+
+/* wrapper for components */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.task {
+    flex: 1 1 calc(33% - 20px);
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+/* small screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column; /* stack tasks vertically on small screens */
+        align-items: center;
+    }
+
+    .task {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+
+/* medium screens */
+@media (max-width: 768px) {
+    .task {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* large screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}

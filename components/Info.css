@@ -1,0 +1,94 @@
+/* styling for different modules */
+.personal-info {
+    background-color: black;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.instructions {
+    background-color: blue;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.AI {
+    background-color: red;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.working-hours {
+    background-color: darkgreen;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* for increased working hours font */
+.working-hours .wh-as-hours {
+    font-size: xx-large;
+    text-decoration-thickness: bold;
+}
+
+.difficulty {
+    background-color: darkgoldenrod;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* wrapper for all the components */
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.info-container .instructions,
+.info-container .AI,
+.info-container .working-hours,
+.info-container .difficulty {
+    flex: 1 1 100%;
+    min-width: 300px;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+    .info-container .instructions,
+    .info-container .AI,
+    .info-container .working-hours,
+    .info-container .difficulty {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* medium screen */
+@media (min-width: 950px) {
+    .info-container .instructions,
+    .info-container .AI,
+    .info-container .working-hours,
+    .info-container .difficulty {
+        flex: 1 1 calc(25% - 20px);
+    }
+
+    /* big screen */
+    .info-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
